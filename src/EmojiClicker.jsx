@@ -21,6 +21,13 @@ export default function EmojiClicker() {
       return previousEmojis.filter((e) => e.id !== id);
     });
   };
+  const replaceEmoji = () => {
+    setEmojis((previousEmojis) => {
+      return previousEmojis.map((e) => {
+        return { ...e, emoji: "🫀" };
+      });
+    });
+  };
   return (
     <>
       <div>
@@ -38,6 +45,7 @@ export default function EmojiClicker() {
       </div>
       <div>
         <button onClick={addEmoji}>Add Emoji</button>
+        <button onClick={replaceEmoji}>Replace</button>
       </div>
     </>
   );
@@ -48,3 +56,4 @@ export default function EmojiClicker() {
 //Arrays In State
 //generating ids with uuid
 //deleting elements
+//updating all elements in an array
