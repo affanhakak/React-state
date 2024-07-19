@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function generateGameBoard() {
-  alert("state changed");
   return Array(5000);
 }
 
